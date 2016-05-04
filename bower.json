@@ -1,0 +1,27 @@
+{
+  "name": "DIYSCO2-web",
+  "version": "0.0.1",
+  "authors": [
+    "@joeyklee (github)"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "bootstrap": "~3.3.6",
+    "leaflet": "~0.7.7",
+    "d3": "~3.5.16",
+    "d3-queue": "~2.0.3"
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Urban CO2 Sensing</title>
+    <!-- Jquery -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <!-- leaflet -->
+    <script type="text/javascript" src="bower_components/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/leaflet/dist/leaflet.css">
+
+    <!-- d3 -->
+    
+    <script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+    <script type="text/javascript" src="bower_components/d3-queue/d3-queue.js"></script>
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300,300italic' rel='stylesheet' type='text/css'>
+    <!-- app styles -->
+    <link rel="stylesheet" type="text/css" href="css/map-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+    <div class="col-md-12 page-all">
+        <div id="map-sidebar" class="col-md-4">
+            <!-- header -->
+            <section>
+                <h1>A Mobile Sensor Network To Map CO<sub>2</sub> in Cities</h1>
+            </section>
+            <!-- <footer class="col-md-12 navbar-fixed-bottom text-center">
+              <div class="col-md-1">Sense</div>
+              <div class="col-md-1">Model</div>
+              <div class="col-md-1">Evaluate</div>
+            </footer> -->
+            <div class="info-panel-section">
+                <section id="section1">
+                    <h4>Mobile CO2 Mapping</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                    <img src="" width="80%" height="250px" class="centering">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                </section>
+                <section id="section2">
+                    <h4>Emissions Inventory Model</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                    <img src="" width="80%" height="250px" class="centering">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                </section>
+                <section id="section3">
+                    <h4>Methodology Evaluation</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                    <img src="" width="80%" height="250px" class="centering">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                </section>
+
+                <br>
+                <footer id="chapter-nav" class="col-md-12 text-center">
+                    <div id="chapter1" class="col-md-3  col-sm-3 col-xs-3">Sense</div>
+                    <div id="chapter2" class="col-md-3 col-sm-3 col-xs-3">Model</div>
+                    <div id="chapter3" class="col-md-3 col-sm-3 col-xs-3">Evaluate</div>
+                </footer>
+            </div>
+        </div>
+        <!-- right side content -->
+        <div class="right-side-content">
+            <dir class="col-md-8"></dir>
+            <div class="col-md-6">
+                <!-- the nav -->
+                <section class="nav row text-center">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h5 id="explore-button">Explore</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h5 id="background-button">Concept</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h5 id="sensor-button">Sensor</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h5 id="contact-button">Contact</h5>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-8 row">
+                <section id="main-page-content">
+                    <!--  Map -->
+                    <div id="explore-section"></div>
+                    <!--  background -->
+                    <div id="background-section" class="col-md-12">
+                        <h3>The DIYSCO<sub>2</sub> Project</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <img src="" width="80%" height="300px" class="centering">
+                        <h3>Background: Urban Challenges and Opportunities</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <img src="" width="80%" height="300px" class="centering">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                    </div>
+                    <!-- sensor -->
+                    <div id="sensor-section" class="col-md-12">
+                        <h3>The DIYSCO2 Sensor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <img src="" width="80%" height="300px" class="centering">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <img src="" width="80%" height="300px" class="centering">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                    </div>
+                    <!-- contact -->
+                    <div id="contact-section" class="col-md-12">
+                        <h3>Contact Us</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ipsum at erat consequat volutpat cursus sed elit. Maecenas aliquam et neque sed finibus. In hac habitasse platea dictumst.</p>
+                        <img src="" width="80%" height="300px" class="centering">
+
+                        <h4>References</h4>
+
+                        <h4>Acknowledgements</h4>
+
+                        <h4>Support & Funding</h4>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- App -->
+<script type="text/javascript" src="js/layout.js"></script>
+<script type="text/javascript" src="js/domix.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</html>
