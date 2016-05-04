@@ -19,7 +19,10 @@ App.domix = (function(){
     }
 
 	function populateContent(selection){
+		el.currentSection = "#"+$(selection).attr("id");
+		console.log(el.currentSection);
 		sect = "#"+$(selection).attr("id").split("-")[0] + "-section";
+		
 
 		$(String(sect)).css("display", "block");
 
@@ -30,14 +33,18 @@ App.domix = (function(){
 		}
 	}
 
-	function resetNavHighlight(selection){
-		console.log("")
+	function resetNavHighlight(){
+		// reset the colors to default
+		$(".nav h5").css("background-color","rgba(150,150,150, 0.15)")
+		// change the background current active button
+		$(el.currentSection).css("background-color", "orange");
 	}
 
 	function exploreButton(){
 		$("#explore-button").click(function(){
 			clearMainContent();
 			populateContent(this);
+			resetNavHighlight();
 		})
 	}
 
@@ -46,6 +53,7 @@ App.domix = (function(){
 			clearMainContent();
 			clearInfoPanelContent();
 			populateContent(this);
+			resetNavHighlight();
 		})
 	}
 	function sensorButton(){
@@ -53,6 +61,7 @@ App.domix = (function(){
 			clearMainContent();
 			clearInfoPanelContent();
 			populateContent(this);
+			resetNavHighlight();
 		})
 	}
 	function contactButton(){
@@ -60,6 +69,7 @@ App.domix = (function(){
 			clearMainContent();
 			clearInfoPanelContent();
 			populateContent(this);
+			resetNavHighlight();
 		})
 	}
 

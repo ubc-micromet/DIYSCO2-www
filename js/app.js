@@ -7,7 +7,8 @@ App.map = (function() {
         map: null,
         grid: null,
         vehicles: null,
-        currentChapter: null
+        currentChapter: null,
+        currentSection: null
     };
 
 
@@ -140,6 +141,7 @@ App.map = (function() {
     function removeAnimatedLines(){
         if (el.vehicles != null) el.map.removeLayer(el.vehicles);   
     }
+
 
 
     // show the sensing:
